@@ -16,11 +16,6 @@ ReactDOM.render(
         <Route path="/" exact component={App} />
         <Route path="/UploadAny" exact component={UploadAny} />
         <Route path="/GoogleExample" component={GoogleExample} />
-        {/* <Route
-          path="/GoogleExample/google_search"
-          exact
-          component={GoogleSearch}
-        /> */}
       </div>
     </Router>
   </React.StrictMode>,

@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/button-has-type */
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,13 +13,12 @@ import {
   useHistory,
 } from 'react-router-dom';
 import ImageUploading from 'react-images-uploading';
-import electron from 'electron';
+import RangeSlider from './RangeSlider';
 
 export default function UploadAny() {
-  const [images, setImages] = useState();
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState([]);
-  const wind = electron.remote.getCurrentWindow();
+  const [images, setImages] = useState([]);
+  const [width, setWidth] = useState(400);
+  const [height, setHeight] = useState(200);
   const history = useHistory();
 
   const maxNumber = 69;
@@ -29,11 +28,45 @@ export default function UploadAny() {
     setImages(imageList);
   };
 
+  const useSlider = ({ value, ...config }) => {
+    const [sliderVal, setSliderVal] = useState(value);
+
+    const [configuration, setConfiguration] = useState(config);
+
+    const onChangeCb = useCallback((val) => {
+      setSliderVal(val);
+    }, []);
+
+    useEffect(() => {
+      setConfiguration({
+        ...config,
+        onChangeCb: (val: number) => setSliderVal(val),
+        value: sliderVal,
+      });
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [sliderVal]);
+
+    // console.log(configuration)
+    return [sliderVal, configuration];
+  };
+
+  const [slider1, slider1Config] = useSlider({
+    min: 0.5,
+    max: 1,
+    value: 0.5,
+    step: 0.1,
+    label: '',
+  });
+
   return (
     <div className="App">
       <button onClick={() => history.goBack()}>Go Back</button>
-
-      <div onClick={() => wind.setOpacity(1)}>Set Opacity to 1</div>
+      <div>
+        <RangeSlider {...slider1Config} classes="additional-css-classes" />
+      </div>
+      <div style={{ display: 'none' }}>
+        <h1>Opacity: {slider1}</h1>
+      </div>
       <div>
         <label htmlFor="height">height</label>
         <input value={height} onChange={(e) => setHeight(e.target.value)} />
