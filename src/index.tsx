@@ -5,15 +5,22 @@ import { HashRouter as Router, Route } from 'react-router-dom';
 import App from './App';
 
 // import Contacts from './Contacts';
-import Google from './Google';
+// import Google from './Google_';
+import UploadAny from './UploadAny';
+import GoogleExample from './GoogleExample';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <div className="App">
         <Route path="/" exact component={App} />
-        {/* <Route path="/Contacts" exact component={Contacts} /> */}
-        <Route path="/Google" exact component={Google} />
+        <Route path="/UploadAny" exact component={UploadAny} />
+        <Route path="/GoogleExample" component={GoogleExample} />
+        {/* <Route
+          path="/GoogleExample/google_search"
+          exact
+          component={GoogleSearch}
+        /> */}
       </div>
     </Router>
   </React.StrictMode>,
