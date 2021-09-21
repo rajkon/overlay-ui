@@ -1,36 +1,22 @@
+Overlay Tool usage
 
-Overlay Tool
----------------
+https://docs.google.com/document/d/1rTnfQBREpNQ-GaGzLYKmjIDdb3Wt-fb6mVu5Ac5_QTo/edit
 
-1. Take a screenshot of your design  
-  
-   Note the dimensions of the screenshot while taking it.
+---
 
-   (Figma design or any mock design is fine. Even simple HTML design ups is fine.)
-   
-   Here in the example it is google design.
+## Overlay Tool Developer guide
 
-2. Put your screenshot file in resources folder 
-   (google search design is an example here).
-
-
-3. Update the dimensions of the image in code.
-
-
-4. yarn start
-
-
-
+1. yarn build
+2. yarn start
 
 Future work in progress:
 
- 1.) No code change facility
-   a.) Allow upload of files from UI
-     Specifying dimensions at the same time.
-   b.) Auto generate the link and components. 
+1.) No code change facility
+a.) Allow upload of files from UI
+Specifying dimensions at the same time.
+b.) Auto generate the link and components.
 
-https://youtu.be/vjEOwo4HLX8
-----------------------
+## https://youtu.be/vjEOwo4HLX8
 
 <img src=".erb/img/erb-banner.png" width="100%" />
 
