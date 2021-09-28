@@ -5,11 +5,10 @@ https://docs.google.com/document/d/1rTnfQBREpNQ-GaGzLYKmjIDdb3Wt-fb6mVu5Ac5_QTo/
 ---
 
 ## Overlay Tool Developer guide
-
+Please read the guide https://docs.google.com/document/d/1rTnfQBREpNQ-GaGzLYKmjIDdb3Wt-fb6mVu5Ac5_QTo/edit  and then you will get an idea about the application.
 1. yarn build
 2. yarn start 
 
-## https://youtu.be/vjEOwo4HLX8
 
 <img src=".erb/img/erb-banner.png" width="100%" />
 
