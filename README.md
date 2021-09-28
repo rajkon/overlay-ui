@@ -1,4 +1,4 @@
-Overlay Tool usage
+Overlay Tool usage if you make an installable package.
 
 https://docs.google.com/document/d/1rTnfQBREpNQ-GaGzLYKmjIDdb3Wt-fb6mVu5Ac5_QTo/edit
 
@@ -7,14 +7,7 @@ https://docs.google.com/document/d/1rTnfQBREpNQ-GaGzLYKmjIDdb3Wt-fb6mVu5Ac5_QTo/
 ## Overlay Tool Developer guide
 
 1. yarn build
-2. yarn start
-
-Future work in progress:
-
-1.) No code change facility
-a.) Allow upload of files from UI
-Specifying dimensions at the same time.
-b.) Auto generate the link and components.
+2. yarn start 
 
 ## https://youtu.be/vjEOwo4HLX8
 
